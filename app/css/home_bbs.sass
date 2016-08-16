@@ -1,0 +1,424 @@
+@import 'common'
+
+/** 主页的主页 **/
+
+._home_bbs
+    header
+        background-color: #FFFFFF
+        height: 48px
+        line-height: 48px
+        border-bottom: 2px solid #bfbfbf
+        .head-group
+            @include flex
+            .head-item
+                @include flex_item
+                text-align: center
+                font-size: 1.8rem
+                color: #666666
+                &.active
+                    border-bottom: 2px solid #e65c7c
+    nav
+        background-color: #ffffff
+        display: none
+        &.show
+            display: block
+        height: 40px
+        overflow: hidden
+        &.index
+            @include pr
+            .nav
+                &-warp,&-group
+                    height: 40px
+                    line-height: 40px
+                &-group
+                    @include clearfix
+                &-item
+                    float: left
+                    margin-right: 15px
+                    font-size: 1.4rem
+                    &.active
+                        color: #e6738e
+        &.personal
+            position: relative
+            .nav
+                &-warp
+                    @include auto_center
+                    height: 18px
+                    position: relative
+                &-group
+                    @include clearfix
+                    height: 18px
+                    line-height: 18px
+                &-item
+                    float: left
+                    @include pr
+                    box-shadow: -1px 0px 0px 0px #ccc
+                    font-size: 1.4rem
+                    &.active
+                        color: #e6738e
+    .main
+        .lists
+            &-item
+                margin-top: 10px
+                background-color: #ffffff
+                padding-bottom: 10px
+            &-head
+                @include clearfix
+                height: 40px
+                line-height: 40px
+                padding: 6px 10px
+                font-size: 0px
+                .head
+                    float: left
+                    width: 30px
+                    max-width: 30px
+                    min-width: 30px
+                    img
+                        vertical-align: middle
+                .nickname
+                    float: left
+                    margin-left: 8px
+                    font-size: 1.4rem
+                    line-height: 40px
+            &-desc
+                @include pr
+                @include text-over(3)
+                font-size: 1.2rem
+                padding-top: 8px
+            &-tools
+                @include pr
+                @include clearfix
+                padding-bottom: 5px
+                padding-top: 13px
+                height: 20px
+                line-height: 20px
+                font-size: 1.2rem
+                overflow: hidden
+                color: #808080
+                border-bottom: 1px dotted #dbdbdb
+                .icon
+                    color: #666666
+                    font-size: 1.8rem
+                .ml15
+                    margin-left: 20px
+                .tools
+                    &-group
+                        @include clearfix
+                        float: left
+                        &:last-child
+                            float: right
+                    &-item
+                        @include clearfix
+                        float: left
+
+                        &>div
+                            float: left
+            &-review
+                @include pr
+                margin-top: 10px
+                overflow: hidden
+                .review
+                    &-warp
+                        @include flex
+                        font-size: 1.2rem
+                        color: #666666
+                    &-icon
+                        min-width: 25px
+                        width: 25px
+                        max-width: 25px
+                        font-size: 2.4rem
+                        text-align: center
+                    &-context
+                        margin-left: 8px
+                        margin-top: 12px
+                    &-item
+                        @include font-over
+                        margin-bottom: 9px
+                        font-size: 1.2rem
+                        line-height: 1.2rem
+                    &-item:last-child
+                        color: #1a1a1a
+
+/** 姐妹说已发布**/
+.bbs_published
+    img
+        width: 100%
+        display: block
+    .main
+        .list-group
+            .list-item
+                background-color: #ffffff
+                margin-bottom: 10px
+                color: #333333
+                &-head
+                    height: 40px
+                    color: #000000
+                    border-bottom: 1px solid #d6d7dc
+                    @include pr
+                    div
+                        float: left
+                    .head-left
+                        width: 30px
+                        padding: 5px 0
+                    .head-right
+                        font-size: 1.4rem
+                        margin: 0 10px
+                        line-height: 40px
+                        @include font-over
+                &-content
+                    border-bottom: 1px solid #d6d7dc
+                    .content-top,.content-center
+                        padding: 5px 38px
+                        @include text-over(3)
+                        font-size: 1.2rem
+                        color: #666666
+                        img
+                            max-width: 210px
+                    .content-bottom
+                        @include clearfix
+                        padding: 5px 10px 5px 38px
+                        &-left
+                            float: left
+                            color: #4c4c4c
+                            font-size: 1.2rem
+                        &-right
+                            @include clearfix
+                            float: right
+                            line-height: 16px
+                            div
+                                float: left
+                                margin: 0 2px
+                            .icon
+                                font-size: 1.8rem
+                                color: #666666
+                                margin-left: 10px
+                            .red
+                                color: #e6738e
+                            .text
+                                color: #333333
+                                font-size: 1.2rem
+
+
+/** 姐妹说发布新帖**/
+.bbs_sendBbs
+    .main
+        header
+            height: 45px
+            line-height: 45px
+            background-color: #FFFFFF
+            color: #4c4c4c
+            border-bottom: 1px solid #d6d7dc
+            @include pr
+            .header-group
+                @include flex
+                .header-left
+                    width: 30px
+                    font-size: 2rem
+                .header-center
+                    @include flex-item
+                    margin-left: -30px
+                    margin-right: -30px
+                    text-align: center
+                    font-size: 1.8rem
+                    color: #4c4c4c
+                .header-right
+                    width: 30px
+                    color: #808080
+                    font-size: 1.2rem
+                    text-align: right
+        .content
+            font-size: 1.2rem
+            color: #808080
+            @include pr
+            padding-top: 10px
+        footer
+            .footer-group
+                height: 26px
+                background-color: #FFFFFF
+                position: fixed
+                bottom: 0
+                right: 0
+                left: 0
+                vertical-align: middle
+                padding: 11px 10px
+            .footer-item
+                width: 24px
+                padding: 0 15px
+                float: left
+
+/** 论坛详情**/
+.bbs_bbsInfo
+    img
+        width: 100%
+        display: block
+    .main
+        header
+            height: 45px
+            line-height: 45px
+            background-color: #FFFFFF
+            color: #4c4c4c
+            border-bottom: 1px solid #d6d7dc
+            @include pr
+            .header-group
+                @include flex
+                .header-left
+                    width: 30px
+                    font-size: 2rem
+                .header-center
+                    @include flex-item
+                    margin-left: -30px
+                    text-align: center
+                    font-size: 1.8rem
+                    color: #4c4c4c
+        .content
+            .info-group
+                background-color: #ffffff
+                @include clearfix
+                .info-item
+                    border-bottom: 1px dashed rgba(0, 0, 0, 0.3)
+                    padding-bottom: 10px
+                    &-top
+                        @include pr
+                        div
+                            float: left
+                        .top-left
+                            width: 30px
+                            padding: 5px 0
+                        .top-right
+                            font-size: 1.4rem
+                            margin: 0 10px
+                            line-height: 40px
+                            @include font-over
+                    &-center
+                        width: 100%
+                    &-bottom
+                        .bottom-intro
+                            margin: 10px 0
+                            @include pr
+                            color: #333333
+                            font-size: 1.4rem
+                        .bottom-item
+                            @include clearfix
+                            @include pr
+                            line-height: 2rem
+                            height: 20px
+                            .left
+                                float: left
+                                .bottom-item-left
+                                    float: left
+                                    color: #808080
+                                    font-size: 1.2rem
+                                .black
+                                    color: #333333
+                                    margin: 0 12px
+                            .right
+                                float: right
+                                .bottom-item-right
+                                    float: left
+                                .icon
+                                    font-size: 1.8rem
+                                    color: #666666
+                                    margin-left: 20px
+                                .number
+                                    font-size: 1.2rem
+                                    color: #e6738e
+            .list-group
+                .list-item
+                    background-color: #ffffff
+                    &-top
+                        @include clearfix
+                        @include pr
+                        border-bottom: 1px solid #d6d7dc
+                        .item-top-left
+                            float: left
+                        div
+                            float: left
+                            .top-left
+                                width: 30px
+                                padding: 5px 0
+                                margin-right: 10px
+                            .top-right
+                                font-size: 1.2rem
+                                line-height: 40px
+                                @include font-over
+                            .red
+                                font-size: 1rem
+                                color: #e6738e
+                                line-height: 40px
+                        .item-top-right
+                            float: right
+                            font-size: 1rem
+                            color: #333333
+                            line-height: 40px
+                    &-center
+                        @include pr
+                        color: #333333
+                        font-size: 1.2rem
+                        margin: 5px 0
+                    &-bottom
+                        font-size: 1rem
+                        color: #808080
+                        padding: 5px 10px
+                        border-bottom: 1px solid #d6d7dc
+        footer
+            position: fixed
+            left: 0px
+            right: 0px
+            bottom: 0px
+            .footer-group
+                @include clearfix
+                height: 48px
+                background-color: #ffffff
+                line-height: 48px
+                .footer-item-left
+                    float: left
+                    font-size: 1.2rem
+                    color: #808080
+                    padding-left: 10px
+                .footer-item
+                    float: right
+                    &-right
+                        float: left
+                        .gBtn
+                            width: 64px
+                            background-color: #3dcccc
+                            color: #FFFFFF
+                            font-size: 1.6rem
+                            margin-left: 16px
+                            text-align: center
+                    .img
+                        width: 48px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

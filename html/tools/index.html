@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>美乐吧</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet" href="../../css/api.css" />
+        <link rel="stylesheet" href="../../css/icon.css" />
+        <link rel="stylesheet" href="../../css/lib/mobiscroll.css" />
+        <link rel="stylesheet" href="../../css/bbs.css" />
+    </head>
+    <body>
+        <div>
+            <div class="_store_lists">
+                <nav class="show">
+                    <div class="nav-tool">
+                        <div class="tool tool-back icon-lt js-btn" data-event="closeWin"><!-- 返回按钮 --></div>
+                        <div class="tool tool-search icon-home-search">
+                            <p>输入商家或产品关键词</p>
+                        </div>
+                        <div class="tool tool-features icon-features"><!-- 功能按钮 --></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <script src="../../js/jquery.min.js"></script>
+        <script src="../../js/lib/mobiscroll.js"></script>
+        <script src="../../js/lib/jquery.touchSlider.js"></script>
+        <script src="../../js/api.js"></script>
+        <script src="../../js/common.js"></script>
+        <script>
+            $('body').on('click' , '.js-btn' , function () {
+                $.app[$(this).data('event')]();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <title>美乐吧</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet" href="../css/api.css" />
+        <link rel="stylesheet" href="../css/loaders.min.css" />
+        <link rel="stylesheet" href="../css/bbs.css" />
+    </head>
+    <body>
+        <script src="../js/api.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/common.js"></script>
+        <script>
+        	apiready = function(){
+                var UICityList = api.require('UICityList');
+                UICityList.open({
+                    rect: {
+                        x: 0,
+                        y: $api.TopSize(),
+                        w: 'auto',
+                        h: 'auto'
+                    },
+                    resource: 'widget://res/citys.json',
+                    styles: {
+                        searchBar: {
+                            bgColor: '#696969',
+                            cancelColor: '#E3E3E3'
+                        },
+                        location: {
+                            color: '#696969',
+                            size: 12
+                        },
+                        sectionTitle: {
+                            bgColor: '#eee',
+                            color: '#000',
+                            size: 12
+                        },
+                        item: {
+                            bgColor: '#fff',
+                            activeBgColor: '#696969',
+                            color: '#000',
+                            size: 14,
+                            height: 40
+                        },
+                        indicator: {
+                            bgColor: '#fff',
+                            color: '#696969'
+                        }
+                    },
+                    currentCity: localStorage.curCityName || '未知',
+                    locationWay: '当前定位城市',
+                    hotTitle: '热门城市',
+                    placeholder: '输入城市名或首字母查询'
+                }, function (ret) {
+                    if(ret.eventType == 'selected') $.app.closeWin();
+                });
+        	};
+        </script>
+    </body>
+</html>

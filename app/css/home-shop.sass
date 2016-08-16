@@ -1,0 +1,408 @@
+@import "common"
+._home_shop
+    //
+    header
+        position: fixed
+        top: 0px
+        left: 0px
+        right: 0px
+        height: 45px
+        overflow: hidden
+        background-color: #ffffff
+        z-index: 100
+        .header
+            &-wrap
+                padding-top: 2.5px
+                padding-bottom: 2.5px
+                overflow: hidden
+            &-group
+                @include flex
+                height: 40px
+                overflow: hidden
+            &-item
+                @include flex-item
+                text-align: center
+                height: 40px
+                overflow: hidden
+                box-shadow: 1px 0px 0px 0px #ebebeb
+                .icon
+                    font-size: 1.8rem
+                p
+                    font-size: 1.2rem
+    .main
+        padding-top: 45px
+        .banner
+            height: 135px
+            &-wrap,&-group,&-item
+                height: 135px
+                overflow: hidden
+            &-item
+                background-repeat: no-repeat
+                background-position: center center
+                background-size: cover
+        .lists
+            padding-top: 10px
+            &-title
+                @include pr
+                &-in
+                    height: 16px
+                    font-size: 1.4rem
+                    font-weight: 600
+                    line-height: 16px
+                    border-left: 2px solid #e65c7c
+                    margin-top: 5px
+                    margin-bottom: 5px
+                    text-indent: .5em
+            &-group
+                @include clearfix
+                @include pr(5px)
+            &-item
+                box-sizing: border-box
+                -moz-box-sizing: border-box
+                -webkit-box-sizing: border-box
+                width: 50%
+                max-width: 253px
+                float: left
+                border: 5px solid transparent
+                position: relative
+                .desc
+                    padding-top: 3px
+                    padding-bottom: 3px
+                    line-height: 1.2em
+                    font-size: 1.2rem
+                    p
+                        @include font-over
+                    div
+                        @include clearfix
+                        i,span
+                            float: left
+                            line-height: 1.4em
+                            height: 14px
+                        span
+                            margin-left: 3px
+                .tips
+                    font-size: 0px
+                &.rec,&.hot
+                    .desc
+                        @include text-over
+                    .tips
+                        color: #ffffff
+                        position: absolute
+                        width: 35px
+                        height: 20px
+                        background-color: #ff3363
+                        top: 10px
+                        left: 0px
+                        text-align: center
+                        line-height: 20px
+                        font-size: 1.2rem
+                        &:after
+                            content: ''
+                            width: 0px
+                            height: 0px
+                            border: 10px solid transparent
+                            border-left-color: #ff3363
+                            position: absolute
+                            top: 0px
+                            right: -20px
+
+/**积分商城-我的积分**/
+.coinShop_myCoin
+    header
+        position: fixed
+        top: 0px
+        left: 0px
+        right: 0px
+        .header-group
+            height: 45px
+            background-color: #e6738e
+            color: #ffffff
+            font-size: 1.8rem
+            line-height: 45px
+            text-align: center
+            @include clearfix
+            @include pr
+            .header-item
+                float: left
+            .header-item:first-child
+                font-size: 2.2rem
+                width: 30px
+            .header-item:last-child
+                margin-left: -30px
+                width: 100%
+    nav
+        position: fixed
+        left: 0px
+        right: 0px
+        top: 45px
+        .nav-group
+            height: 45px
+            background-color: #ffffff
+            font-size: 1.8rem
+            color: #666666
+            line-height: 45px
+            text-align: center
+            @include flex
+            border-bottom: 1px solid #d6d7dc
+            .nav-item
+                @include flex-item
+                box-shadow: 2px 0 0 0 #e5e5e5
+    .main
+        margin-top: 95px
+        .list-group
+            background-color: #ffffff
+            .list-item
+                @include clearfix
+                @include pr
+                border-bottom: 1px solid #d6d7dc
+                height: 35px
+                line-height: 35px
+                color: #333333
+                font-size: 1.2rem
+                &-left
+                    float: left
+                .grayText
+                    color: #808080
+                    font-size: 1rem
+                    margin: 0 5px
+                &-right
+                    float: right
+
+/**积分商城-我的订单**/
+.coinShop_myOrder
+    header
+        position: fixed
+        top: 0px
+        left: 0px
+        right: 0px
+        .header-group
+            height: 45px
+            background-color: #e6738e
+            color: #ffffff
+            font-size: 1.8rem
+            line-height: 45px
+            text-align: center
+            @include clearfix
+            @include pr
+            .header-item
+                float: left
+            .header-item:first-child
+                font-size: 2.2rem
+                width: 30px
+            .header-item:last-child
+                margin-left: -30px
+                width: 100%
+    .main
+        margin-top: 50px
+        .list-group
+            .list-item
+                background-color: #ffffff
+                &-top
+                    @include clearfix
+                    @include pr
+                    .top-left
+                        float: left
+                        height: 18px
+                        line-height: 18px
+                        padding: 6px 3px
+                        @include font-over
+                        font-size: 1.4rem
+                        &-img
+                            width: 24px
+                &-center
+                    @include flex
+                    padding: 10px 0
+                    .center-item
+                        @include flex-item
+                        padding: 5px
+                        border-bottom: 1px solid #d6d7dc
+                    .center-img
+                        width: 100px
+                        max-width: 100px
+                        min-width: 100px
+                    .center-text
+                        &-top
+                            @include flex
+                            .text-top-item
+                                @include flex-item
+                                @include text-over
+                                color: #333333
+                                font-size: 1.4rem
+                            .text-top-right
+                                width: 55px
+                                max-width: 55px
+                                min-width: 55px
+                                margin-left: 20px
+                                font-size: 1.4rem
+                                text-align: right
+                        &-center
+                            color: #999999
+                            font-size: 1.2rem
+                            margin: 5px 0
+                        &-bottom
+                            width: 70px
+                            height: 18px
+                            background-color: #e61747
+                            color: #ffffff
+                            line-height: 18px
+                            text-align: center
+                            font-size: 1.2rem
+                        .all
+                            float: right
+                            font-size: 1rem
+                            margin: 5px 0
+            .list-item-bottom
+                @include clearfix
+                padding: 10px
+                .btn-group
+                    @include clearfix
+                    float: right
+                    .btn-item
+                        width: 64px
+                        height: 30px
+                        line-height: 30px
+                        text-align: center
+                        border-radius: 3px
+                        margin-left: 15px
+                        float: left
+                        border: 1px solid #d6d7dc
+                        font-size: 1.2rem
+
+/**积分商城-物流追踪**/
+.coinShop_chase
+    header
+        position: fixed
+        top: 0px
+        left: 0px
+        right: 0px
+        border-bottom: 1px solid #d6d7dc
+        .header-group
+            height: 45px
+            background-color: #f5f5f5
+            color: #4c4c4c
+            font-size: 1.8rem
+            line-height: 45px
+            text-align: center
+            @include clearfix
+            @include pr
+            .header-item
+                float: left
+            .header-item:first-child
+                font-size: 2.2rem
+                width: 30px
+            .header-item:last-child
+                margin-left: -30px
+                width: 100%
+    .main
+        margin-top: 46px
+        .state-group
+            @include flex
+            background-color: #ffffff
+            padding: 10px
+            border-bottom: 1px solid #d6d7dc
+            .state-item-img
+                width: 80px
+                max-width: 80px
+                min-width: 80px
+                margin-right: 20px
+                position: relative
+                .number
+                    position: absolute
+                    top: 58px
+                    left: 0px
+                    right: 0px
+                    z-index: 3
+                    height: 22px
+                    background-color: rgba(0,0,0,0.4)
+                    color: #FFF
+                    line-height: 22px
+                    text-align: center
+                    font-size: 1.2rem
+            .state-item
+                @include flex-item
+                &-list
+                    font-size: 1.2rem
+                    color: #b2b2b2
+                    line-height: 1.8rem
+                    @include clearfix
+                    .list-left
+                        float: left
+                        margin-right: 5px
+                    .black
+                        color: #333333
+                    .red
+                        color: #e94d6a
+        .address-group
+            .address-item
+                margin: 5px 0
+                background-color: #ffffff
+                @include pr
+                border-bottom: 1px solid #d6d7dc
+                border-top: 1px solid #d6d7dc
+                @include clearfix
+                &-left
+                    float: left
+                    padding: 4px 0
+                    font-size: 1.2rem
+                    .person
+                        font-size: 2.4rem
+                        color: #5ce5e5
+                        width: 33px
+                        height: 33px
+                        border-radius: 18px
+                        border: 1px solid #5ce5e5
+                        margin-right: 16px
+                        line-height: 33px
+                        text-align: center
+                    .black
+                        color: #333333
+                        @include font-over
+                        margin-top: 3px
+                &-right
+                    float: right
+                    width: 28px
+                    height: 28px
+                    background-color: #e67e5c
+                    line-height: 28px
+                    border-radius: 14px
+                    color: #FFF
+                    text-align: center
+                    margin: 8.5px 0
+                    font-size: 2rem
+        .list-group
+            background-color: #ffffff
+            .list-title
+                @include pr
+                font-size: 1.4rem
+                color: #333333
+                line-height: 25px
+                border-bottom: 1px solid #d6d7dc
+            .list-item
+                @include clearfix
+                @include flex
+                border-bottom: 1px solid #d6d7dc
+                font-size: 1.2rem
+                color: #bfbfbf
+                padding: 10px
+                @include pr(20px)
+                &-left
+                    @include flex-item(1)
+                    margin-right: 10px
+                    .icon
+                        font-size: 1.2rem
+                &-right
+                    @include flex-item(30)
+            .pink
+                color: #e65c7c
+                .icon
+                    font-size: 1.4rem
+
+
+
+
+
+
+
+
+
+
